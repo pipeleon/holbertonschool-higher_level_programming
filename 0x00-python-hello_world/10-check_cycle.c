@@ -10,15 +10,18 @@
 int check_cycle(listint_t *list)
 {
 	listint_t *temp, *current;
+	int check;
 
 	temp = list;
 	current = list->next;
 
-	while (current)
+	check = 0;
+	while (current || check == 0)
 	{
 		if (temp == current)
 			return (1);
 		current = current->next;
+		check = check_cycle(current);
 	}
 
 	return (0);
