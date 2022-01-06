@@ -7,4 +7,6 @@ def best_score(a_dictionary):
         if temp < j:
             best = i
         temp = j
+    if best == None:
+        return None
     return best
