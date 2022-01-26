@@ -1,0 +1,35 @@
+# 5-text_indentation.txt
+
+===============================
+ How to Use 5-text_indentation.py
+===============================
+
+This library is very simple, since it only has one function called
+``text_indentation()``.
+
+=======
+
+``text_indentation()`` prints a text splitting it by . : ?
+
+Test Case: Import Module
+::
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+  
+
+Test Case: Normal Text
+::
+    >>> text_indentation("Hola. mi nombre es: Felipe Leon? Si lo es")
+    Hola.
+    <BLANKLINE>
+    mi nombre es:
+    <BLANKLINE>
+    Felipe Leon?
+    <BLANKLINE>
+    Si lo es
+
+Test Case: text not a str
+::
+    >>> text_indentation(12)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
