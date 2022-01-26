@@ -1,0 +1,41 @@
+# 3-say_my_name.txt
+
+===============================
+ How to Use 3-say_my_name.py
+===============================
+
+This library is very simple, since it only has one function called
+``say_my_name()``.
+
+=======
+
+``say_my_name()`` prints the names given
+
+Test Case: Importing Module
+::
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+  
+
+Test Case: Just a name
+::
+    >>> say_my_name("Felipe")
+    My name is Felipe 
+
+Test Case: Name anf lastname
+::
+    >>> say_my_name("Felipe", "Leon")
+    My name is Felipe Leon
+
+Test Case: Name not string
+::
+    >>> say_my_name(19)
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+Test Case: last name not a string
+::
+    >>> say_my_name("Felipe", [1, 2])
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
