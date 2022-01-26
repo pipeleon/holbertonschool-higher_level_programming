@@ -1,0 +1,40 @@
+# 0-add_integer.txt
+
+===============================
+ How to Use 0-add_integer.py
+===============================
+
+This library is very simple, since it only has one function called
+``add_integer()``.
+
+=======
+
+``add_integer()`` returns the adding of its arguments when they are integers or floats
+
+Test Case: Importing Module
+::
+    >>> add_integer = __import__('0-add_integer').add_integer
+  
+
+Test Case: Only 1 argument
+::
+    >>> add_integer(2)
+    100
+
+Test Case: 2 arguments
+::
+    >>> add_integer(2, 5)
+    7
+
+Test Case: 2 arguments, one of them is a float
+::
+    >>> add_integer(2.8, 5)
+    7
+
+Test Case: 2 arguments, one of them is invalid
+::
+    >>> add_integer("a", 5)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
