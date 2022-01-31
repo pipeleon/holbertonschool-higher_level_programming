@@ -4,7 +4,7 @@
 
 class MyInt(int):
     """"Class MyInt with int inherance"""
- 
+
     def __eq__(self, __x: object) -> bool:
         return super().__ne__(__x)
 
