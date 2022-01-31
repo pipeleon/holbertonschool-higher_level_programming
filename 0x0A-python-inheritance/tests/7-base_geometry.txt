@@ -1,0 +1,32 @@
+# 7-base_geometry.txt
+
+===============================
+ How to Use 7-base_geometry.py
+===============================
+
+This library is very simple, since it only has one class called
+``BaseGeometry`` with one funciton calle ''integer_validator''.
+
+=======
+
+``integer_validator()`` validates that the arguments passed are integers
+
+Test Case: Importing Class
+::
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> test = BaseGeometry()
+  
+
+Test Case: Wrong Type
+::
+    >>> test.integer_validator("name", "Felipe")
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+
+Test Case: Wrong Number
+::
+    >>> test.integer_validator("numbaa", -7)
+    Traceback (most recent call last):
+    ...
+    ValueError: numbaa must be greater than 0

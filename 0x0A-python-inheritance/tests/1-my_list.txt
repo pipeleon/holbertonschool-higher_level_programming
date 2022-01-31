@@ -1,0 +1,27 @@
+# 1-my_list.txt
+
+===============================
+ How to Use 1-my_list.py
+===============================
+
+This library is very simple, since it only has one class called
+``MyList`` with one funciton calle '' print_sorted''.
+
+=======
+
+``print_sorted()`` prints a list class MyList sorted
+
+Test Case: Importing Class
+::
+    >>> MyList = __import__('1-my_list').MyList
+  
+
+Test Case: List normal
+::
+    >>> new = MyList()
+    >>> new.append(8)
+    >>> new.append(4)
+    >>> new.append(2)
+    >>> new.append(3)
+    >>> new.print_sorted()
+    [2, 3, 4, 8]
