@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """Task 8 Project 0x0B Python"""
-import json
 
 
 def class_to_json(obj):
