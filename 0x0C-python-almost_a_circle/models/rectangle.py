@@ -1,17 +1,6 @@
 #!/usr/bin/python3
-"""Task 2 Project 0x0C Python"""
-
-
-class Base():
-    """Class Base"""
-    __nb_objects = 0
-
-    def __init__(self, id=None):
-        if id is not None:
-            self.id = id
-        else:
-            Base.__nb_objects += 1
-            self.id = Base.__nb_objects
+"""Project 0x0C Python"""
+from .base import Base
 
 
 class Rectangle(Base):
@@ -130,3 +119,12 @@ class Rectangle(Base):
                 self.x = kwargs["x"]
             if "y" in kwargs:
                 self.y = kwargs["y"]
+
+    def to_dictionary(self):
+        new = {}
+        new["id"] = self.id
+        new["width"] = self.__width
+        new["height"] = self.__height
+        new["x"] = self.__x
+        new["y"] = self.__y
+        return new
