@@ -5,6 +5,7 @@ from models.base import Base
 
 class Rectangle(Base):
     """Class Rectangle"""
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """Function to create a new instance"""
         super().__init__(id)
@@ -15,7 +16,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """ Width Method when called"""
+        """Width Method when called"""
         return self.__width
 
     @property
