@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Project 0x0C Python"""
-from .rectangle import Rectangle
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
