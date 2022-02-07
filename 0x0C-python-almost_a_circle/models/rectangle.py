@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Rectangle Module - Project 0x0C Python"""
-from models.base import Base
+from .base import Base
 
 
 class Rectangle(Base):
@@ -123,6 +123,7 @@ class Rectangle(Base):
                 self.y = kwargs["y"]
 
     def to_dictionary(self):
+        """Dict represantation"""
         new = {}
         new["id"] = self.id
         new["width"] = self.__width
@@ -132,6 +133,7 @@ class Rectangle(Base):
         return new
 
     def update_list(self, list):
+        """Update by List"""
         if list:
             self.id = int(list[0])
             self.__width = int(list[1])
@@ -140,6 +142,7 @@ class Rectangle(Base):
             self.__y = int(list[4])
 
     def to_list(self):
+        """Atributtes to List"""
         new = []
         new.append(self.id)
         new.append(self.__width)
