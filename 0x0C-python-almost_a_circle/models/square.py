@@ -1,16 +1,18 @@
 #!/usr/bin/python3
-"""Project 0x0C Python"""
+"""Square Module - Project 0x0C Python"""
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
     """Class Square"""
     def __init__(self, size, x=0, y=0, id=None):
+        """Funtion to create a new instance"""
         super().__init__(size, size, x, y, id)
         self.size = size
 
     @property
     def size(self):
+        """Return size attribute"""
         return self.__size
 
     @size.setter
@@ -47,6 +49,7 @@ class Square(Rectangle):
                 self.y = kwargs["y"]
 
     def to_dictionary(self):
+        """Return attribute of the class in a dict"""
         new = {}
         new["id"] = self.id
         new["size"] = self.__size
@@ -55,6 +58,7 @@ class Square(Rectangle):
         return new
 
     def update_list(self, list):
+        """Update the isntances by values of a List"""
         if list:
             self.id = int(list[0])
             self.size = int(list[1])
@@ -62,6 +66,7 @@ class Square(Rectangle):
             self.y = int(list[3])
 
     def to_list(self):
+        """Return a List with the attributes of the instance"""
         new = []
         new.append(self.id)
         new.append(self.__size)

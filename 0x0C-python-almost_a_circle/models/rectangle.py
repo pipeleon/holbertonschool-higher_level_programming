@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Project 0x0C Python"""
+"""Rectangle Module - Project 0x0C Python"""
 from models.base import Base
 
 
