@@ -128,3 +128,20 @@ class Rectangle(Base):
         new["x"] = self.__x
         new["y"] = self.__y
         return new
+
+    def update_list(self, list):
+        if list:
+            self.id = int(list[0])
+            self.__width = int(list[1])
+            self.__height = int(list[2])
+            self.__x = int(list[3])
+            self.__y = int(list[4])
+
+    def to_list(self):
+        new = []
+        new.append(self.id)
+        new.append(self.__width)
+        new.append(self.__height)
+        new.append(self.__x)
+        new.append(self.__y)
+        return new

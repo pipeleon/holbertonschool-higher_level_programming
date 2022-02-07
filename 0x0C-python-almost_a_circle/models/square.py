@@ -53,3 +53,18 @@ class Square(Rectangle):
         new["x"] = self.x
         new["y"] = self.y
         return new
+
+    def update_list(self, list):
+        if list:
+            self.id = int(list[0])
+            self.size = int(list[1])
+            self.x = int(list[2])
+            self.y = int(list[3])
+
+    def to_list(self):
+        new = []
+        new.append(self.id)
+        new.append(self.__size)
+        new.append(self.x)
+        new.append(self.y)
+        return new
