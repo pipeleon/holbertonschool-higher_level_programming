@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Task 1 Project 0x0C Python"""
+"""Class Base - Project 0x0C Python"""
 import json
 import csv
 
@@ -26,8 +26,9 @@ class Base():
     def save_to_file(cls, list_objs):
         with open("{}.json".format(cls.__name__), "w", encoding="utf-8") as f:
             new = []
-            for i in list_objs:
-                new.append(i.to_dictionary())
+            if list_objs is not None:
+                for i in list_objs:
+                    new.append(i.to_dictionary())
             f.write(Base.to_json_string(new))
 
     @staticmethod
