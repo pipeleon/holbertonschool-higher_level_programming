@@ -6,8 +6,7 @@ if (process.argv[3]) {
   for (let i = 2; process.argv[i]; i++) {
     list.push(parseInt(process.argv[i]));
   }
-  list.sort();
-  list.reverse();
+  list.sort(function (a, b) { return b - a; });
   console.log(list[1]);
 } else {
   console.log(0);
