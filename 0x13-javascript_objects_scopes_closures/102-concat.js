@@ -10,7 +10,7 @@ const fs = require('fs');
 
 content = fs.readFileSync(nameFileA, 'utf8');
 content = content + '\n';
-content = content + fs.readFileSync(nameFileB, 'utf8');
+content = content + fs.readFileSync(nameFileB, 'utf8') + '\n';
 
 fs.writeFile(nameFileC, content, function (err) {
   if (err) throw err;
