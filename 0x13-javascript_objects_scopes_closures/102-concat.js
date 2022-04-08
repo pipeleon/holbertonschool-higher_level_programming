@@ -9,8 +9,7 @@ let content;
 const fs = require('fs');
 
 content = fs.readFileSync(nameFileA, 'utf8');
-content = content + '\n';
-content = content + fs.readFileSync(nameFileB, 'utf8') + '\n';
+content = content + fs.readFileSync(nameFileB, 'utf8');
 
 fs.writeFileSync(nameFileC, content, function (err) {
   if (err) throw err;
