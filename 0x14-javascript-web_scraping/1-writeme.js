@@ -9,6 +9,5 @@ const fs = require('fs');
 fs.writeFileSync(filePath, stringToWrite, function (err) {
   if (err) {
     console.error(err);
-    return;
   }
 });
