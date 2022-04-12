@@ -4,20 +4,21 @@ const request = require('request');
 
 const movie = process.argv[2];
 
-const url1 = 'https://swapi-api.hbtn.io/api/people/';
-const url2 = 'https://swapi-api.hbtn.io/api/films/' + movie + '/';
+const url = 'https://swapi-api.hbtn.io/api/films/' + movie + '/';
 
-request(url1, function (error, response, body) {
+request(url, function (error, response, body) {
   if (error) {
     console.log(error);
   } else {
-    people = JSON.parse(body).results;
+    const people = JSON.parse(body).characters;
     for (let i = 0; people[i]; i++) {
-      for (let j = 0; people[i].films[j]; j++) {
-        if (url2 === people[i].films[j]) {
-          console.log(people[i].name);
+      request(people[i], function (error, response, body) {
+        if (error) {
+          console.log(error);
+        } else {
+          console.log(JSON.parse(body).name);
         }
-      }      
+      });
     }
   }
 });
