@@ -12,7 +12,7 @@ request(url, function (error, response, body) {
     const movies = JSON.parse(body).results;
     for (let j = 0; movies[j]; j++) {
       for (let i = 0; movies[j].characters[i]; i++) {
-        if (movies[j].characters[i] === 'https://swapi-api.hbtn.io/api/people/18/') {
+        if (movies[j].characters[i] === 'https://swapi-api.hbtn.io/api/people/18/' || movies[j].characters[i] === 'http://swapi-api.hbtn.io/api/people/18/') {
           count++;
         }
       }
