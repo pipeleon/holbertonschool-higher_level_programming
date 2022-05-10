@@ -8,10 +8,16 @@ if __name__ == "__main__":
     conn = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
                            passwd=sys.argv[2], db=sys.argv[3], charset="utf8")
     cur = conn.cursor()
-    com1 = "SELECT * FROM states WHERE states.name"
-    command = com1 + " REGEXP '^N' ORDER BY states.id ASC"
-    cur.execute(command)
-    query_rows = cur.fetchall()
+    try:
+        com1 = "SELECT * FROM states WHERE states.name"
+        command = com1 + " REGEXP '^N' ORDER BY states.id ASC"
+        cur.execute(command)
+        query_rows = cur.fetchall()
+    except e:
+        try:
+            print("MySQL Error {:d}: {:s}".format(e.args[0], e.args[1]))
+        except IndexError:
+            print("MySQL Error: {}".format(str(e)))
     for row in query_rows:
         print(row)
     cur.close()
