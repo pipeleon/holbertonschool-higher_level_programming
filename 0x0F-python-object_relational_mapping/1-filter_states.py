@@ -19,7 +19,6 @@ if __name__ == "__main__":
         except IndexError:
             print("MySQL Error: {}".format(str(e)))
     for row in query_rows:
-        if row[0] == 'N':
-            print(row)
+        print(row)
     cur.close()
     conn.close()
