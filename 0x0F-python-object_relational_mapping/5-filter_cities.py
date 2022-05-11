@@ -9,7 +9,7 @@ if __name__ == "__main__":
                            passwd=sys.argv[2], db=sys.argv[3], charset="utf8")
     cur = conn.cursor()
     com1 = "SELECT name FROM cities WHERE state_id = (SELECT id FROM states "
-    com2 = com1 + "WHERE name=%s) ORDER BY cities.id"
+    com2 = com1 + "WHERE name=%s) ORDER BY cities.id ASC"
     cur.execute(com2, (sys.argv[4], ))
     query_rows = cur.fetchall()
     i = 0
