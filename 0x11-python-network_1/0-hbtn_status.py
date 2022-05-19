@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Task 0 0x11. Python - Network #1"""
 import urllib.request
 with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
     html = response.read()
