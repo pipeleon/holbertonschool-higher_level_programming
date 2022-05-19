@@ -9,7 +9,7 @@ if __name__ == "__main__":
     """Main Function"""
     url = sys.argv[1]
     req = urllib.request.Request(url)
-    try: 
+    try:
         with urllib.request.urlopen(req) as response:
             html = response.read()
             print(html.decode('utf8'))
