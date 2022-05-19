@@ -6,4 +6,4 @@ if __name__ == "__main__":
     """Main Function"""
     with urllib.request.urlopen(sys.argv[1]) as response:
         html = response.info()
-        print(html['X-Request-Id'])
+        print(html.get('X-Request-Id'))
